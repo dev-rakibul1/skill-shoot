@@ -1,51 +1,12 @@
 "use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import { AiOutlineAppstore, AiOutlineClose } from "react-icons/ai";
 
-const navItems = (
-  <>
-    <Link href="/home">Home</Link>
-    <Link href="/course">Course</Link>
-    <Link href="/subscribe">Subscribe</Link>
-    <Link href="/about">About</Link>
-    <Link href="/testimonial">Testimonial</Link>
-  </>
-);
-
-const loginItems = (
-  <>
-    <Link href="/login">Login</Link>
-    <Link href="/register">
-      <span className="bg-orange-500 text-white px-4 py-2 rounded cursor-pointer">
-        Register
-      </span>
-    </Link>
-  </>
-);
-
-const navbarTitle = (
-  <div className="text-white text-lg font-bold">
-    <Link href="/">
-      <span className="text-white cursor-pointer">
-        Skill <span className="text-orange-500">Shoot</span>
-      </span>
-    </Link>
-  </div>
-);
-
-const navbarTitleForHamburger = (
-  <div className="text-black text-lg font-bold">
-    <Link href="/">
-      <span className="text-black cursor-pointer">
-        Skill <span className="text-orange-500">Shoot</span>
-      </span>
-    </Link>
-  </div>
-);
-
 const Navbar: React.FC = () => {
   const [hamburgerTrigger, setHamburgerTrigger] = useState<boolean>(false);
+  const pathname = usePathname();
 
   const handleToggleActive = () => {
     setHamburgerTrigger((prevState) => !prevState);
@@ -69,9 +30,89 @@ const Navbar: React.FC = () => {
     };
   }, []);
 
+  const isActive = (path: string) => {
+    return pathname === path;
+  };
+
+  const navItems = (
+    <>
+      <Link
+        href="/home"
+        className={`font-semibold ${
+          isActive("/home") ? "text-white" : "text-gray-300"
+        }`}
+      >
+        Home
+      </Link>
+      <Link
+        href="/course"
+        className={`font-semibold ${
+          isActive("/course") ? "text-white" : "text-gray-300"
+        }`}
+      >
+        Course
+      </Link>
+      <Link
+        href="/subscribe"
+        className={`font-semibold ${
+          isActive("/subscribe") ? "text-white" : "text-gray-300"
+        }`}
+      >
+        Subscribe
+      </Link>
+      <Link
+        href="/about"
+        className={`font-semibold ${
+          isActive("/about") ? "text-white" : "text-gray-300"
+        }`}
+      >
+        About
+      </Link>
+      <Link
+        href="/testimonial"
+        className={`font-semibold ${
+          isActive("/testimonial") ? "text-white" : "text-gray-300"
+        }`}
+      >
+        Testimonial
+      </Link>
+    </>
+  );
+
+  const loginItems = (
+    <>
+      <Link href="/login">Login</Link>
+      <Link href="/register">
+        <span className="bg-orange-500 text-white px-4 py-2 rounded cursor-pointer">
+          Register
+        </span>
+      </Link>
+    </>
+  );
+
+  const navbarTitle = (
+    <div className="text-white text-lg font-bold">
+      <Link href="/">
+        <span className="text-white cursor-pointer">
+          Skill <span className="text-orange-500">Shoot</span>
+        </span>
+      </Link>
+    </div>
+  );
+
+  const navbarTitleForHamburger = (
+    <div className="text-black text-lg font-bold">
+      <Link href="/">
+        <span className="text-black cursor-pointer">
+          Skill <span className="text-orange-500">Shoot</span>
+        </span>
+      </Link>
+    </div>
+  );
+
   return (
     <>
-      {/* hamburger overly */}
+      {/* hamburger overlay */}
       <div
         className={`z-[5] hamburger-overlay bg-black w-full h-full absolute top-0 right-0 opacity-70 transition-opacity duration-500 ease-in-out ${
           hamburgerTrigger ? "opacity-70 visible" : "opacity-0 invisible"
