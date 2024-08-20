@@ -2,10 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+html,
+body {
+  font-family: "Poppins", sans-serif;
 }
 
 .theme-container {
@@ -44,3 +52,176 @@
     transform: rotate(1turn);
   }
 }
+
+.clip-path-small-circle-1 {
+  clip-path: circle(99% at 0 2%);
+}
+
+.clip-path-small-circle-2 {
+  clip-path: circle(99% at 0 2%);
+  transform: rotate(180deg);
+}
+
+/* Button wrap */
+.cart-image-wrap {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.cart-image-wrap::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(1.5px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.play-icons-box {
+  width: 70px;
+  height: 70px;
+  background-color: #949494;
+  font-size: 19px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  /* background: rgba(160, 160, 160, 0.3); */
+  backdrop-filter: blur(4px);
+  transition: all 0.3s;
+  animation: play-animation 2s infinite;
+}
+
+.play-icons-box:hover .play-icons-info {
+  background-color: #949494;
+}
+.play-icons-box:hover {
+  background: transparent !important;
+  border: 17px solid #fff !important;
+  border-radius: 100%;
+}
+
+.play-icons-info {
+  cursor: pointer;
+}
+
+.play-icons-info {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  font-size: 19px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  transition: all 0.3s;
+}
+
+@keyframes play-animation {
+  0% {
+    box-shadow: 0 0 0 0 #fdfdfd;
+  }
+  100% {
+    box-shadow: 0 0 0 30px transparent;
+  }
+}
+
+/* Modal */
+.modal-enter {
+  opacity: 0;
+  transform: scale(0.9);
+}
+.modal-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 300ms, transform 300ms;
+}
+.modal-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+.modal-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 300ms, transform 300ms;
+}
+
+/* skill shoot */
+.skill-shoot-image {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+.skill-shoot-image::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 60%;
+  left: 50%; /* Start positioning from the center */
+  bottom: 0; /* Position at the bottom */
+  transform: translateX(-50%); /* Center the element horizontally */
+  background: #245d51;
+  border-radius: 100% 100% 0 0;
+  z-index: -1;
+}
+
+/* ---------PRICING STYLE--------- */
+/* .pricing-wrap {
+  position: relative;
+}
+
+.price-hover-effect {
+  position: relative;
+  z-index: 1;
+}
+
+.animated-span {
+  position: absolute;
+  top: 0;
+  left: 33.33%;
+  background-color: red;
+  height: 100%;
+  width: 33.33%;
+  border-radius: 15px;
+  transition: all 0.5s;
+  pointer-events: none;
+}
+
+.price-hover-effect:nth-child(1):hover ~ .animated-span {
+  left: 0;
+}
+
+.price-hover-effect:nth-child(2):hover ~ .animated-span {
+  left: 33.33%;
+}
+
+.price-hover-effect:nth-child(3):hover ~ .animated-span {
+  left: 66.66%;
+  color: green;
+}
+
+@media (max-width: 768px) {
+  .animated-span {
+    left: 0;
+    width: 100%;
+  }
+
+  .price-hover-effect:nth-child(1):hover ~ .animated-span {
+    top: 0;
+  }
+
+  .price-hover-effect:nth-child(2):hover ~ .animated-span {
+    top: calc(100% / 3);
+  }
+
+  .price-hover-effect:nth-child(3):hover ~ .animated-span {
+    top: calc(200% / 3);
+  }
+} */

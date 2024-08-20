@@ -40,7 +40,11 @@ const LandingPage: React.FC = () => {
           </p>
 
           <div className="mx-auto md:flex justify-start items-center">
-            <ButtonComponent title="Start journey" color="#DC5A01" />
+            <ButtonComponent
+              title="Start journey"
+              color="#DC5A01"
+              icon={true}
+            />
             <Icons className="ml-3 mt-7 md:mt-0" />
           </div>
         </div>

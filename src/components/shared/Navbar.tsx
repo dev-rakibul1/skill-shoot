@@ -6,6 +6,9 @@ import { AiOutlineAppstore, AiOutlineClose } from "react-icons/ai";
 
 const Navbar: React.FC = () => {
   const [hamburgerTrigger, setHamburgerTrigger] = useState<boolean>(false);
+  const [isSticky, setIsSticky] = useState<boolean>(false);
+  const [navbarTranslate, setNavbarTranslate] =
+    useState<string>("translateY(0)"); // Initial transform position
   const pathname = usePathname();
 
   const handleToggleActive = () => {
@@ -15,6 +18,26 @@ const Navbar: React.FC = () => {
   const handleHamburgerClose = () => {
     setHamburgerTrigger(false);
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 500) {
+        setIsSticky(true);
+        setNavbarTranslate("translateY(0)"); // Move the navbar to the top smoothly
+      } else if (window.scrollY > 0 && window.scrollY <= 500) {
+        setNavbarTranslate("translateY(-100%)"); // Move the navbar out of view smoothly
+      } else {
+        setNavbarTranslate("translateY(0)"); // Default position when at the top of the page
+        setIsSticky(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   useEffect(() => {
     const handleResize = () => {
@@ -119,7 +142,12 @@ const Navbar: React.FC = () => {
         }`}
         onClick={handleHamburgerClose}
       ></div>
-      <nav className="bg-green-900 p-4">
+      <nav
+        className={`navbar p-4 fixed left-0 right-0 z-50 transition-transform duration-700 ease-in-out ${
+          isSticky ? "bg-blue-900" : "bg-green-900"
+        }`}
+        style={{ transform: navbarTranslate }}
+      >
         <div className="theme-container mx-auto flex justify-between items-center">
           {navbarTitle}
           <div className="hidden md:flex space-x-8 text-white">{navItems}</div>
