@@ -124,19 +124,20 @@ const Slider = () => {
   return (
     <>
       <div className="bg-[#245D51]">
-        <div className="theme-container p-5">
+        <div className="theme-container p-5 relative">
+          {" "}
+          {/* Make this div relative */}
           <div className="text-center py-7">
             {/* Slider title */}
-            <h2 className="font-semibold text-4xl text-gray-300 leading-[54px]">
+            <h2 className="font-semibold text-2xl md:text-4xl text-gray-300 md:leading-[54px]">
               Popular courses of the week
             </h2>
-            <p className="w-full md:w-[30%] mx-auto text-gray-300">
+            <p className="mt-3 w-full md:w-[30%] mx-auto text-gray-300">
               List of the most popular lists that are often studied by our
               members
             </p>
           </div>
-
-          <div className="rounded-lg overflow-hidden">
+          <div className="rounded-lg overflow-hidden relative">
             {/* Cart article part */}
             <div className="mt-5 p-3">
               <SwiperReact
@@ -163,30 +164,29 @@ const Slider = () => {
               </SwiperReact>
             </div>
           </div>
-
           {/* Navigation Buttons */}
-          <div className="flex justify-center mt-8 space-x-4">
+          <div className="absolute inset-0 flex justify-between items-center">
             <button
               ref={prevRef}
               onClick={handleSlidePrev} // Handle left button click
               className={`${
                 activeArrow === "left"
-                  ? "bg-[#F88C3D] text-white"
-                  : "bg-white border border-gray-300 text-gray-800"
-              } p-3 rounded-full shadow-md z-10`}
+                  ? "bg-[#245D51] text-white border-4"
+                  : "bg-white text-gray-800 border-4 border-[transparent]"
+              } p-3 rounded-full shadow-md z-10 `}
             >
-              <AiOutlineArrowLeft className="w-6 h-6" />
+              <AiOutlineArrowLeft className="w-4 h-4" />
             </button>
             <button
               ref={nextRef}
               onClick={handleSlideNext} // Handle right button click
               className={`${
                 activeArrow === "right"
-                  ? "bg-[#F88C3D] text-white"
-                  : "bg-white border border-gray-300 text-gray-800"
+                  ? "bg-[#245D51] text-white border-4"
+                  : "bg-white border-4 border-[transparent] text-gray-800"
               } p-3 rounded-full shadow-md z-10`}
             >
-              <AiOutlineArrowRight className="w-6 h-6" />
+              <AiOutlineArrowRight className="w-4 h-4" />
             </button>
           </div>
         </div>

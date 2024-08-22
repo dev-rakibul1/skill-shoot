@@ -4,7 +4,7 @@ import User from "../../../../public/assets/User-2.png";
 const WhyDoWeExistSection = () => {
   return (
     <>
-      <section className="theme-container mx-auto px-4 py-10 lg:flex lg:space-x-10 mt-24">
+      <section className="theme-container mx-auto px-4 py-10 lg:flex lg:space-x-10 mt-7 sm:mt-24">
         {/* Left Column */}
         <div className="lg:w-1/2 ">
           <h2 className="text-2xl md:text-4xl font-semibold text-center lg:text-left mb-6">
@@ -28,12 +28,12 @@ const WhyDoWeExistSection = () => {
           <hr className="border-gray-300 mb-8" />
           <div className="flex space-x-10 lg:justify-start justify-center">
             <div className="text-center">
-              <p className="text-3xl font-bold">100+</p>
-              <p className="text-gray-500">Updated Material</p>
+              <p className="text-xl md:text-3xl font-bold">100+</p>
+              <p className="text-gray-500 text-sm">Updated Material</p>
             </div>
             <div className="text-center">
-              <p className="text-3xl font-bold">15K</p>
-              <p className="text-gray-500">Member Join</p>
+              <p className="text-xl md:text-3xl font-bold">15K</p>
+              <p className="text-gray-500 text-sm">Member Join</p>
             </div>
           </div>
         </div>

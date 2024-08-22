@@ -20,19 +20,6 @@ const HomePage = () => {
       <SubscribeCourse />
       <Pricing />
       <Testimonial />
-
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
     </div>
   );
 };

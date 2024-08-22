@@ -6,7 +6,7 @@ const Pricing = () => {
   const [hoveredPlan, setHoveredPlan] = useState("Pro");
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2 mt-24">
+    <div className="flex flex-col items-center justify-center min-h-screen py-2 mt-12 md:mt-24">
       <article className="text-center">
         <h2 className="text-2xl md:text-4xl font-semibold leading-8 md:leading-[54px]">
           <span className="text-[#F88C3D]">Subscribe</span> with us now
@@ -17,7 +17,7 @@ const Pricing = () => {
         </p>
       </article>
 
-      <div className="pricing-wrap flex flex-wrap justify-center mt-24">
+      <div className="pricing-wrap flex flex-wrap justify-center mt-7 md:mt-24">
         {/* Base Plan */}
         <div
           className={`cursor-pointer price-hover-effect group transition-all shadow-lg rounded-xl mx-4 mb-4 p-6 w-80 ${

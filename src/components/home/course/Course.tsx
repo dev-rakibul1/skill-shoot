@@ -8,8 +8,8 @@ const Course = () => {
     <section className="theme-container mt-7 lg:mt-40 relative">
       <div className="flex justify-around items-center bg-pink-200 px-7 rounded-md">
         <div className="max-w-full lg:w-[50%]">
-          <article className="text-center lg:text-left p-7 lg:p-0 flex flex-col items-center lg:items-start justify-center">
-            <h2 className="text-2xl md:text-4xl font-semibold leading-8 md:leading-[54px]">
+          <article className="text-center lg:text-left py-12 md:p-12 lg:p-0 flex flex-col items-center lg:items-start justify-center">
+            <h2 className="mb-3 md:mb-0 text-2xl md:text-4xl font-semibold leading-8 md:leading-[54px]">
               Happy <span className="text-[#F88C3D]">Chinese New Year</span>,
               20% discount for you today{" "}
             </h2>

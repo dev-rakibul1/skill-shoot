@@ -10,7 +10,7 @@ import Uber from "../../../../public/assets/brand/Uber.png";
 const BrandGroup = () => {
   return (
     <div className="flex justify-center items-center p-4 mt-12">
-      <ul className="grid xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-5 xl:grid-cols-5 lg:grid-cols-5 gap-6 justify-center items-center">
+      <ul className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-5 xl:grid-cols-5 lg:grid-cols-5 gap-6 justify-center items-center">
         <li className="">
           <Image src={Uber} alt="Uber Logo" />
         </li>

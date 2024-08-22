@@ -9,7 +9,7 @@ import FakeImage from "../../../../public/assets/Skill-short.png";
 
 const SkillShort: React.FC = () => {
   return (
-    <section className="theme-container mt-24">
+    <section className="theme-container mt-12 md:mt-24">
       <div className="flex gap-12 justify-between items-center">
         {/* Left side: Image */}
         <div className="hidden lg:block relative">
@@ -48,7 +48,7 @@ const SkillShort: React.FC = () => {
         {/* Right side: Text and Icons */}
         <div className="w-full md:w-[80%] lg:w-[50%] mx-auto">
           <div className="flex-1 text-center lg:text-left ">
-            <h1 className="text-4xl font-bold text-gray-800 mb-4">
+            <h1 className="text-2xl md:text-4xl font-bold text-gray-800 mb-4">
               Let us <span className="text-[#245D51]">Skill Shoot</span>
             </h1>
             <p className="text-[#808080] text-sm font-normal">
@@ -60,7 +60,7 @@ const SkillShort: React.FC = () => {
               We have been around since 2019 with currently 100+ updated
               materials and 15K members who have joined.
             </p>
-            <div className="grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 mx-auto">
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 gap-4 mx-auto">
               <div className="flex items-center">
                 <svg
                   width="25"

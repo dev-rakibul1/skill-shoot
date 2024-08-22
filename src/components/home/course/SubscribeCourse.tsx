@@ -5,7 +5,7 @@ const SubscribeCourse = () => {
     <section className="theme-container mt-7 lg:mt-16 relative">
       <div className="py-12 lg:flex justify-around items-center bg-pink-200 px-7 rounded-md">
         <div className="max-w-full w-full lg:w-[50%]">
-          <article className="text-center lg:text-left p-7 lg:p-0 flex flex-col items-center lg:items-start justify-center">
+          <article className="text-center lg:text-left py-12 md:p-7 lg:p-0 flex flex-col items-center lg:items-start justify-center">
             <h2 className="text-2xl md:text-3xl font-semibold leading-5 md:leading-[54px]">
               <span className="text-[#F88C3D]">Improve</span>, your skills, and
               reach your career as soon as possible
@@ -13,11 +13,11 @@ const SubscribeCourse = () => {
           </article>
         </div>
         <div className="relative max-w-full w-full lg:w-[50%]">
-          <div className="relative  flex justify-center items-center">
+          <div className="relative  flex flex-col md:flex-row justify-center items-center">
             <span className="mx-2">
               <ButtonComponent title="Join now" color="#CB8461" />
             </span>
-            <span className="mx-2">
+            <span className="mx-2 mt-3 md:mt-0 inline-block">
               <ButtonComponent title="Subscribe Course" color="#245D51" />
             </span>
           </div>

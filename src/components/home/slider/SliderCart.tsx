@@ -1,7 +1,5 @@
-import Modal from "@/components/shared/Modal";
 import ButtonComponent from "@/utilities/Button";
 import Image from "next/image";
-import { useState } from "react";
 import { AiOutlineUser } from "react-icons/ai";
 import { HiMiniPlay } from "react-icons/hi2";
 
@@ -29,15 +27,15 @@ const CarouselCart: React.FC<CarouselProps> = ({
   buttonText,
   image,
 }) => {
-  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+  // const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
-  const openModal = () => {
-    setIsModalOpen(true);
-  };
+  // const openModal = () => {
+  //   setIsModalOpen(true);
+  // };
 
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
+  // const closeModal = () => {
+  //   setIsModalOpen(false);
+  // };
 
   return (
     <div className="max-w-sm mx-auto rounded-lg bg-white overflow-hidden">
@@ -51,9 +49,9 @@ const CarouselCart: React.FC<CarouselProps> = ({
           height={350}
         />
         <div className="play-icon-wrap absolute inset-0 flex justify-center items-center">
-          <div className="play-icons-box" onClick={openModal}>
+          <div className="play-icons-box">
             <div className="play-icons-info">
-              <HiMiniPlay className="icon" />
+              <HiMiniPlay className="icon text-[#245D51]" />
             </div>
           </div>
         </div>
@@ -66,7 +64,7 @@ const CarouselCart: React.FC<CarouselProps> = ({
             {courseTitle}
           </h2>
 
-          <div className="flex items-center justify-between mt-3">
+          <div className="xs:flex items-center justify-between mt-3">
             <div className="flex justify-between items-center">
               <img src={image} alt="" className="w-10 h-10 rounded-full" />
 
@@ -75,7 +73,7 @@ const CarouselCart: React.FC<CarouselProps> = ({
                 <p className="font-thin text-xs">{instructor?.title}</p>
               </div>
             </div>
-            <div className="flex justify-between items-center">
+            <div className="mt-3 xs:mt-0 flex justify-between items-center">
               <AiOutlineUser className="w-10 h-10 rounded-full" />
 
               <div className="ml-3">
@@ -88,13 +86,13 @@ const CarouselCart: React.FC<CarouselProps> = ({
           {/* price */}
           <div className="flex items-center justify-between mt-3">
             <ButtonComponent fontSize="12" title="Buy Now" color="#245D51" />
-            <Modal
+            {/* <Modal
               closeModal={closeModal}
               openModal={openModal}
               setIsModalOpen={setIsModalOpen}
               isModalOpen={isModalOpen}
               title="Basics of learning team management"
-            />
+            /> */}
             <h3 className="text-xl font-semibold">
               ${price}{" "}
               <span className="text-xs font-extralight">

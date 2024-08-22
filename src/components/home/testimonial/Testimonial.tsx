@@ -75,7 +75,7 @@ const Testimonial = () => {
   };
 
   return (
-    <div className="mt-24">
+    <div className="mt-12 md:mt-24">
       <article className="theme-container text-center">
         <h2 className="text-2xl md:text-4xl font-semibold leading-8 md:leading-[54px]">
           What do they

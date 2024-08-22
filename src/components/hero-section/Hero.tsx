@@ -2,7 +2,6 @@ import ButtonComponent from "@/utilities/Button";
 import Image from "next/image";
 import React from "react";
 import landing from "../../../public/assets/landing.png";
-import textShapeImage from "../../../public/assets/textShape.png";
 import Icons from "../shared/Icons";
 import CalenderIcon from "./CalenderIcon";
 import "./Hero.css";
@@ -12,19 +11,17 @@ import UXLandCard from "./UXLandCard";
 
 const LandingPage: React.FC = () => {
   return (
-    <section className="bg-green-900 text-white">
-      <div className="theme-container mx-auto flex flex-col md:flex-row items-center justify-between px-6">
+    <section className="bg-green-900 text-white overflow-hidden">
+      <div className="theme-container mx-auto flex flex-col items-center md:flex-row md:items-center justify-center md:justify-between px-6">
         {/* Left Content */}
-        <div className="md:w-1/2 ">
-          <h1 className="xs: text-2xl sm:text-4xl md:text-6xl font-bold mb-4">
+        <div className="w-full md:w-1/2 text-center py-12 md:py-12 lg:py-12">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
             There is{" "}
             <span className="relative inline-block">
               always
-              <Image
-                src={textShapeImage}
-                className="mt-3 sm:max-w-[100px] md:max-w-full"
-                width={190}
-                height={20}
+              <img
+                src="https://i.ibb.co/6nKnx1H/Vector-1.png"
+                className="mt-3 max-w-full w-full absolute bottom-[-15%] left-0"
                 alt="shape"
               />
             </span>
@@ -32,25 +29,25 @@ const LandingPage: React.FC = () => {
             something new for us to learn
           </h1>
           <p className="sm:text-sm md:text-xl mb-6">
-            we have created more than 100+ materials on various
+            We have created more than 100+ materials on various
             <br />
             things that will help your career, with mentors who are
             <br />
             experienced in their fields.
           </p>
 
-          <div className="mx-auto md:flex justify-start items-center">
+          <div className="flex flex-col items-center md:flex-row justify-center md:justify-start md:items-center space-y-4 md:space-y-0 md:space-x-3">
             <ButtonComponent
               title="Start journey"
               color="#DC5A01"
               icon={true}
             />
-            <Icons className="ml-3 mt-7 md:mt-0" />
+            <Icons className="mt-2 md:mt-0" />
           </div>
         </div>
 
         {/* Right Content */}
-        <div className=" hidden md:block md:w-1/2 relative mt-8 md:mt-0 ">
+        <div className="w-full md:w-1/2 relative mt-8 md:mt-0 flex justify-center hidden md:block">
           <div className="flex justify-center">
             <Image
               src={landing}
@@ -74,7 +71,7 @@ const LandingPage: React.FC = () => {
               <PenIcons />
             </span>
           </div>
-          <div className="absolute bottom-[5%] left-[100%]  rounded-lg">
+          <div className="absolute bottom-[5%] left-[100%] rounded-lg">
             <span className="landing-icons text-xs text-white">
               <CalenderIcon />
             </span>

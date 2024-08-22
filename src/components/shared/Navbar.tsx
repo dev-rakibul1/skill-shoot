@@ -61,7 +61,7 @@ const Navbar: React.FC = () => {
     <>
       <Link
         href="/home"
-        className={`font-semibold ${
+        className={`font-normal ${
           isActive("/home") ? "text-white" : "text-gray-300"
         }`}
       >
@@ -69,7 +69,7 @@ const Navbar: React.FC = () => {
       </Link>
       <Link
         href="/course"
-        className={`font-semibold ${
+        className={`font-normal ${
           isActive("/course") ? "text-white" : "text-gray-300"
         }`}
       >
@@ -77,7 +77,7 @@ const Navbar: React.FC = () => {
       </Link>
       <Link
         href="/subscribe"
-        className={`font-semibold ${
+        className={`font-normal ${
           isActive("/subscribe") ? "text-white" : "text-gray-300"
         }`}
       >
@@ -85,7 +85,7 @@ const Navbar: React.FC = () => {
       </Link>
       <Link
         href="/about"
-        className={`font-semibold ${
+        className={`font-normal ${
           isActive("/about") ? "text-white" : "text-gray-300"
         }`}
       >
@@ -93,7 +93,7 @@ const Navbar: React.FC = () => {
       </Link>
       <Link
         href="/testimonial"
-        className={`font-semibold ${
+        className={`font-normal ${
           isActive("/testimonial") ? "text-white" : "text-gray-300"
         }`}
       >
@@ -104,9 +104,11 @@ const Navbar: React.FC = () => {
 
   const loginItems = (
     <>
-      <Link href="/login">Login</Link>
+      <Link className="text-white font-normal" href="/login">
+        Login
+      </Link>
       <Link href="/register">
-        <span className="bg-orange-500 text-white px-4 py-2 rounded cursor-pointer">
+        <span className="font-normal bg-orange-500 text-white px-4 py-2 rounded cursor-pointer">
           Register
         </span>
       </Link>
