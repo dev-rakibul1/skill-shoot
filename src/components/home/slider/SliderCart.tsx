@@ -64,7 +64,7 @@ const CarouselCart: React.FC<CarouselProps> = ({
             {courseTitle}
           </h2>
 
-          <div className="xs:flex items-center justify-between mt-3">
+          <div className="flex xs:flex-col sm:flex-row items-center justify-between mt-3">
             <div className="flex justify-between items-center">
               <img src={image} alt="" className="w-10 h-10 rounded-full" />
 

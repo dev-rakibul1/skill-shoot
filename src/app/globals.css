@@ -30,6 +30,10 @@ body {
   width: 45px;
   height: auto;
 }
+.mall-device-icons svg {
+  width: 25px !important;
+  height: auto;
+}
 
 /* Spinner css */
 .spinner {

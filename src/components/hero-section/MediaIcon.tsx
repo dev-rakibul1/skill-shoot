@@ -1,11 +1,12 @@
+import { ISvgProps } from "@/global/global";
 import "./Hero.css";
 
-const MediaIcon = () => {
+const MediaIcon = ({ w = "51", h = "auto" }: ISvgProps) => {
   return (
     <div className="zooming-media-icon">
       <svg
-        width="51"
-        height="51"
+        width={w}
+        height={h}
         viewBox="0 0 51 51"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

@@ -14,7 +14,7 @@ const LandingPage: React.FC = () => {
     <section className="bg-green-900 text-white overflow-hidden">
       <div className="theme-container mx-auto flex flex-col items-center md:flex-row md:items-center justify-center md:justify-between px-6">
         {/* Left Content */}
-        <div className="w-full md:w-1/2 text-center py-12 md:py-12 lg:py-12">
+        <div className="w-full md:w-1/2 text-center mt-12 md:mt-0 py-12 md:py-12 lg:py-12">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
             There is{" "}
             <span className="relative inline-block">
@@ -43,6 +43,24 @@ const LandingPage: React.FC = () => {
               icon={true}
             />
             <Icons className="mt-2 md:mt-0" />
+          </div>
+
+          <div className="block md:hidden ">
+            <div className="absolute top-[40%] right-[35px] rounded-lg">
+              <span className="small-device-icons text-xs text-white">
+                <MediaIcon w="30" />
+              </span>
+            </div>
+            <div className="absolute top-[8%] left-[50px] rounded-lg">
+              <span className="small-device-icons text-xs text-white">
+                <PenIcons w="30" />
+              </span>
+            </div>
+            <div className="absolute top-[32%] left-[7%] rounded-lg ">
+              <span className="small-device-icons text-xs text-white">
+                <CalenderIcon w="30" />
+              </span>
+            </div>
           </div>
         </div>
 
